@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing – StenoAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../css/pricing.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav-container">
+        <a href="./../index.html" class="logo-section">
+            <div class="logo">S</div>
+            <div class="brand">Steno<span>AI</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="./../index.html">Home</a></li>
+            <li><a href="./record.html">Record</a></li>
+            <li><a href="./transcript.html">Transcript</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./pricing.html" class="active nav-cta">Pricing</a></li>
+        </ul>
+        <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="./../index.html">Home</a></li>
+            <li><a href="./record.html">Record</a></li>
+            <li><a href="./transcript.html">Transcript</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+        </ul>
+        <a href="./record.html" class="mobile-nav-cta">Get Started →</a>
+    </div>
+</header>
+
+<div class="page-header">
+    <div class="page-badge">⭐ Simple, Transparent Pricing</div>
+    <h1 class="page-title">Choose Your <em>Plan</em></h1>
+    <p class="page-subtitle">Start free. Upgrade when you need more power. No hidden charges.</p>
+</div>
+
+<div class="billing-toggle">
+    <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+    <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()">
+        <div class="toggle-knob"></div>
+    </div>
+    <span class="toggle-label" id="yearlyLabel">Yearly <span class="save-badge">Save 20%</span></span>
+</div>
+
+<div class="pricing-section">
+    <div class="plans-grid">
+
+        <!-- FREE -->
+        <div class="plan-card plan-free">
+            <div class="plan-icon">🎙</div>
+            <div class="plan-name">Starter</div>
+            <div class="plan-desc">Perfect for trying out StenoAI. No credit card needed.</div>
+            <div class="plan-price monthly-price"><span>₹</span>0</div>
+            <div class="plan-price yearly-price" style="display:none"><span>₹</span>0</div>
+            <div class="plan-period">Free forever</div>
+            <hr class="divider">
+            <ul class="feat-list">
+                <li><strong>30 min/month</strong> recording time</li>
+                <li>Voice + Type mode</li>
+                <li>English only</li>
+                <li>Export .txt transcript</li>
+                <li>5 saved sessions</li>
+                <li class="no">No AI summarization</li>
+                <li class="no">No multi-speaker detection</li>
+                <li class="no">No priority support</li>
+            </ul>
+            <a href="./record.html" class="plan-btn btn-free">Start Free →</a>
+        </div>
+
+        <!-- PRO -->
+        <div class="plan-card plan-pro">
+            <div class="popular-badge">⭐ Most Popular</div>
+            <div class="plan-icon">🚀</div>
+            <div class="plan-name">Pro</div>
+            <div class="plan-desc">For professionals, journalists & legal teams. Everything you need.</div>
+            <div class="plan-price monthly-price"><span>₹</span>1,500</div>
+            <div class="plan-price yearly-price" style="display:none"><span>₹</span>1,200</div>
+            <div class="plan-period monthly-period">per month</div>
+            <div class="plan-period yearly-period" style="display:none">per month, billed ₹14,400/year</div>
+            <hr class="divider">
+            <ul class="feat-list">
+                <li><strong>Unlimited</strong> recording time</li>
+                <li>Voice + Type mode</li>
+                <li><strong>13 Indian languages</strong></li>
+                <li>Export .txt, .pdf, .docx</li>
+                <li><strong>Unlimited</strong> saved sessions</li>
+                <li><strong>AI Summarization</strong></li>
+                <li><strong>Multi-speaker detection</strong></li>
+                <li><strong>Priority email support</strong></li>
+                <li><strong>Audio download</strong> included</li>
+            </ul>
+            <button class="plan-btn btn-pro" onclick="openModal('Pro',1500)">Get Pro → ₹1,500/mo</button>
+        </div>
+
+        <!-- TEAM -->
+        <div class="plan-card plan-team">
+            <div class="plan-icon">👥</div>
+            <div class="plan-name">Team</div>
+            <div class="plan-desc">For law firms, newsrooms & enterprises. Multi-seat access.</div>
+            <div class="plan-price monthly-price"><span>₹</span>4,999</div>
+            <div class="plan-price yearly-price" style="display:none"><span>₹</span>3,999</div>
+            <div class="plan-period monthly-period">per month · up to 5 users</div>
+            <div class="plan-period yearly-period" style="display:none">per month · billed ₹47,988/year</div>
+            <hr class="divider">
+            <ul class="feat-list">
+                <li>Everything in Pro</li>
+                <li><strong>5 team seats</strong> included</li>
+                <li>Shared session library</li>
+                <li><strong>Admin dashboard</strong></li>
+                <li>Custom branding (logo)</li>
+                <li>Bulk export</li>
+                <li><strong>Dedicated support</strong></li>
+                <li>API access (coming soon)</li>
+            </ul>
+            <button class="plan-btn btn-team" onclick="openModal('Team',4999)">Get Team Plan →</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="compare-section">
+    <h2 class="compare-title">Full Feature Comparison</h2>
+    <div class="compare-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Starter</th>
+                    <th style="background:#3d5457">Pro</th>
+                    <th>Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Recording time</td><td>30 min/mo</td><td class="highlight-col">Unlimited</td><td>Unlimited</td></tr>
+                <tr><td>Languages</td><td>English only</td><td class="highlight-col">13 languages</td><td>13 languages</td></tr>
+                <tr><td>Voice mode</td><td><span class="tick">✓</span></td><td class="highlight-col"><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+                <tr><td>Type mode</td><td><span class="tick">✓</span></td><td class="highlight-col"><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+                <tr><td>Saved sessions</td><td>5</td><td class="highlight-col">Unlimited</td><td>Unlimited</td></tr>
+                <tr><td>Export formats</td><td>.txt only</td><td class="highlight-col">.txt, .pdf, .docx</td><td>.txt, .pdf, .docx</td></tr>
+                <tr><td>AI Summarization</td><td><span class="cross">✕</span></td><td class="highlight-col"><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+                <tr><td>Multi-speaker detection</td><td><span class="cross">✕</span></td><td class="highlight-col"><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+                <tr><td>Audio download</td><td><span class="cross">✕</span></td><td class="highlight-col"><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+                <tr><td>Team seats</td><td>1</td><td class="highlight-col">1</td><td>5</td></tr>
+                <tr><td>Admin dashboard</td><td><span class="cross">✕</span></td><td class="highlight-col"><span class="cross">✕</span></td><td><span class="tick">✓</span></td></tr>
+                <tr><td>Priority support</td><td><span class="cross">✕</span></td><td class="highlight-col">Email (24hr)</td><td>Dedicated</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="activate-section">
+    <div class="activate-card">
+        <h3>🔑 Activate Your License</h3>
+        <p>Already purchased? Enter your license key below to unlock Pro features in your browser.</p>
+        <div class="activate-input-row">
+            <input type="text" id="licenseInput" placeholder="STENO-XXXX-XXXX-XXXX" maxlength="22" oninput="formatLicenseInput(this)">
+            <button class="activate-btn" onclick="activateLicense()">Activate</button>
+        </div>
+        <div class="activate-result" id="activateResult"></div>
+    </div>
+</div>
+
+<div class="security-section">
+    <div class="security-inner">
+        <div class="section-label">🔒 Security & Trust</div>
+        <h2 class="security-title">Built with Security First</h2>
+        <p class="security-sub">Your data, your privacy — always. Here's how we protect you.</p>
+        <div class="security-grid">
+            <div class="sec-card">
+                <div class="sec-icon">🔑</div>
+                <h4>License Key System</h4>
+                <p>Unique encrypted license keys generated per user. Keys are validated locally — no server call needed after activation.</p>
+            </div>
+            <div class="sec-card">
+                <div class="sec-icon">🛡️</div>
+                <h4>Zero Data Upload</h4>
+                <p>Audio recordings and transcripts NEVER leave your browser. Everything runs 100% client-side using Web Speech API.</p>
+            </div>
+            <div class="sec-card">
+                <div class="sec-icon">⏳</div>
+                <h4>Key Expiry Control</h4>
+                <p>Each license key has an expiry date built into the hash. Expired keys are automatically rejected, no server needed.</p>
+            </div>
+            <div class="sec-card">
+                <div class="sec-icon">🔒</div>
+                <h4>IndexedDB Storage</h4>
+                <p>Sessions are stored in your browser's secure IndexedDB — isolated per browser, never synced to any external server.</p>
+            </div>
+            <div class="sec-card">
+                <div class="sec-icon">📧</div>
+                <h4>Email Verification</h4>
+                <p>License keys are tied to your email address. Sharing keys triggers detection and automatic key revocation.</p>
+            </div>
+            <div class="sec-card">
+                <div class="sec-icon">🇮🇳</div>
+                <h4>Razorpay Payments</h4>
+                <p>Payments processed via Razorpay — India's most trusted payment gateway with PCI-DSS Level 1 compliance.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="business-section">
+    <h2 class="biz-title">📊 Business Model</h2>
+    <p class="biz-sub">How StenoAI grows sustainably and serves professionals across India.</p>
+    <div class="biz-grid">
+        <div class="biz-card">
+            <div class="biz-icon" style="background:var(--sage);box-shadow:3px 3px 0 var(--dark)">🎯</div>
+            <div>
+                <h4>Target Segments</h4>
+                <p>Court reporters & legal stenographers, journalists & podcasters, medical transcriptionists, corporate meeting notes, educational institutions, and government bodies — all underserved in India today.</p>
+            </div>
+        </div>
+        <div class="biz-card">
+            <div class="biz-icon" style="background:var(--mist);box-shadow:3px 3px 0 var(--dark)">💰</div>
+            <div>
+                <h4>Revenue Streams</h4>
+                <p>Pro subscriptions at ₹1,500/mo · Team plans at ₹4,999/mo · Annual plans (20% discount) · Future: API access for developers · White-label for law firms.</p>
+            </div>
+        </div>
+        <div class="biz-card">
+            <div class="biz-icon" style="background:var(--cream);border-color:var(--dark);box-shadow:3px 3px 0 var(--dark)">📈</div>
+            <div>
+                <h4>Growth Strategy</h4>
+                <p>Freemium funnel → word of mouth in legal community → partnerships with bar councils & press clubs → B2B Team sales → API monetization for SaaS developers.</p>
+            </div>
+        </div>
+        <div class="biz-card">
+            <div class="biz-icon" style="background:var(--deep);box-shadow:3px 3px 0 var(--dark)">🌐</div>
+            <div>
+                <h4>Moat & Differentiation</h4>
+                <p>Only Indian-language-first transcription tool with full privacy. Competitors require cloud uploads. StenoAI's browser-native approach is unique in the Indian market.</p>
+            </div>
+        </div>
+    </div>
+    <div class="revenue-box">
+        <h3>📊 Revenue Projections</h3>
+        <div class="revenue-grid">
+            <div class="rev-item"><div class="rev-num">₹1.5L</div><div class="rev-lbl">Month 6 MRR</div><div class="rev-formula">100 Pro users</div></div>
+            <div class="rev-item"><div class="rev-num">₹4.5L</div><div class="rev-lbl">Month 12 MRR</div><div class="rev-formula">300 Pro users</div></div>
+            <div class="rev-item"><div class="rev-num">₹15L+</div><div class="rev-lbl">Year 2 MRR</div><div class="rev-formula">700 Pro + 100 Teams</div></div>
+            <div class="rev-item"><div class="rev-num">~82%</div><div class="rev-lbl">Gross Margin</div><div class="rev-formula">Low infra cost</div></div>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <div class="cta-box">
+        <h2>Start with Pro Today</h2>
+        <p>Join professionals who trust StenoAI. Cancel anytime. 7-day money-back guarantee.</p>
+        <button onclick="openModal('Pro',1500)">🚀 Get Pro — ₹1,500/mo</button>
+    </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="payModal">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <h2>Complete Purchase</h2>
+        <div class="modal-plan-badge" id="modalPlanBadge">Pro Plan — ₹1,500/month</div>
+        <div class="modal-form-group"><label>Full Name</label><input type="text" id="payName" placeholder="Rahul Sharma"></div>
+        <div class="modal-form-group"><label>Email Address</label><input type="email" id="payEmail" placeholder="rahul@example.com"></div>
+        <div class="modal-form-group"><label>Card Number</label><input type="text" id="cardNum" placeholder="4242 4242 4242 4242" maxlength="19" oninput="formatCard(this)"></div>
+        <div class="card-row">
+            <div class="modal-form-group" style="margin-bottom:0"><label>Expiry</label><input type="text" id="cardExp" placeholder="MM/YY" maxlength="5" oninput="formatExpiry(this)"></div>
+            <div class="modal-form-group" style="margin-bottom:0"><label>CVV</label><input type="text" id="cardCvv" placeholder="•••" maxlength="3"></div>
+            <div class="modal-form-group" style="margin-bottom:0"><label>ZIP</label><input type="text" id="cardZip" placeholder="400001" maxlength="6"></div>
+        </div>
+        <br>
+        <div class="security-note">🔒 Secured by Razorpay · PCI-DSS Compliant · No card data stored</div>
+        <button class="pay-btn" onclick="processPayment()">💳 Pay Now</button>
+        <div class="modal-footer">By subscribing you agree to our Terms of Service. Cancel anytime.</div>
+    </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="success-modal" id="successModal">
+    <div class="success-box">
+        <div class="success-icon">🎉</div>
+        <h2>Welcome to Pro!</h2>
+        <p>Your license key has been generated. Save it safely — you'll need it to activate StenoAI Pro on any browser.</p>
+        <div class="license-box" id="generatedKey">STENO-XXXX-XXXX-XXXX</div>
+        <button class="copy-btn" onclick="copyKey()">📋 Copy License Key</button>
+        <p style="font-size:0.78rem;color:var(--text-soft);margin-bottom:1rem">A copy has also been sent to your email address.</p>
+        <button class="close-success" onclick="closeSuccess()">✅ Activate Now</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand footer-col">
+                <span class="brand-name">StenoAI</span>
+                <p>Professional transcription powered by AI. Record, transcribe and save — built for accuracy, speed and privacy.</p>
+                <div class="maker-note">Made with ❤️ by <strong>Pratiksha</strong> &amp; <strong>Shubham</strong></div>
+            </div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="./../index.html">→ Home</a></li><li><a href="./record.html">→ Record</a></li><li><a href="./transcript.html">→ Transcript</a></li><li><a href="./about.html">→ About</a></li><li><a href="./contact.html">→ Contact</a></li></ul></div>
+            <div class="footer-col"><h4>Plans</h4><ul><li><a href="./pricing.html">→ Starter (Free)</a></li><li><a href="./pricing.html">→ Pro ₹1,500/mo</a></li><li><a href="./pricing.html">→ Team ₹4,999/mo</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="./about.html">→ About StenoAI</a></li><li><a href="./contact.html">→ Contact Us</a></li><li><a href="./pricing.html">→ Pricing</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 StenoAI · Built with ❤️ by Pratiksha &amp; Shubham</p>
+            <div class="footer-bottom-links"><a href="./../index.html">Home</a><a href="./record.html">Record</a><a href="./transcript.html">Transcript</a><a href="./pricing.html">Pricing</a><a href="./about.html">About</a></div>
+        </div>
+    </div>
+</footer>
+
+<script>
+let isYearly=false;
+function toggleBilling(){isYearly=!isYearly;document.getElementById('billingToggle').classList.toggle('yearly',isYearly);document.getElementById('monthlyLabel').classList.toggle('active',!isYearly);document.getElementById('yearlyLabel').classList.toggle('active',isYearly);document.querySelectorAll('.monthly-price,.monthly-period').forEach(el=>el.style.display=isYearly?'none':'');document.querySelectorAll('.yearly-price,.yearly-period').forEach(el=>el.style.display=isYearly?'':'none');}
+let currentPlan='Pro',currentPrice=1500;
+function openModal(plan,price){currentPlan=plan;currentPrice=price;document.getElementById('modalPlanBadge').textContent=plan+' Plan — ₹'+price.toLocaleString('en-IN')+'/month';document.getElementById('payModal').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('payModal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('payModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+function formatCard(el){let v=el.value.replace(/\D/g,'').substring(0,16);el.value=v.replace(/(.{4})/g,'$1 ').trim();}
+function formatExpiry(el){let v=el.value.replace(/\D/g,'');if(v.length>=2)v=v.substring(0,2)+'/'+v.substring(2,4);el.value=v;}
+function generateLicenseKey(email,plan){const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let hash=0;const seed=email.toLowerCase()+plan+Date.now().toString().slice(0,-4);for(let i=0;i<seed.length;i++)hash=((hash<<5)-hash+seed.charCodeAt(i))|0;const abs=Math.abs(hash);function seg(n){let s='';for(let i=0;i<4;i++)s+=chars[(n*7+i*13)%chars.length];return s;}return`STENO-${seg(abs)}-${seg(abs>>8)}-${seg(abs>>16)}`;}
+function processPayment(){const name=document.getElementById('payName').value.trim();const email=document.getElementById('payEmail').value.trim();const card=document.getElementById('cardNum').value.trim();const exp=document.getElementById('cardExp').value.trim();const cvv=document.getElementById('cardCvv').value.trim();if(!name||!email||!card||!exp||!cvv){alert('Please fill in all fields!');return;}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Please enter a valid email address.');return;}if(card.replace(/\s/g,'').length<16){alert('Please enter a valid 16-digit card number.');return;}const payBtn=document.querySelector('.pay-btn');payBtn.textContent='⏳ Processing...';payBtn.disabled=true;setTimeout(()=>{const key=generateLicenseKey(email,currentPlan);document.getElementById('generatedKey').textContent=key;const licenses=JSON.parse(localStorage.getItem('stenoai_licenses')||'[]');licenses.push({key,email,plan:currentPlan,date:Date.now(),active:true});localStorage.setItem('stenoai_licenses',JSON.stringify(licenses));closeModal();document.getElementById('successModal').classList.add('open');document.body.style.overflow='hidden';payBtn.textContent='💳 Pay Now';payBtn.disabled=false;['payName','payEmail','cardNum','cardExp','cardCvv','cardZip'].forEach(id=>{document.getElementById(id).value='';});},2200);}
+function copyKey(){const key=document.getElementById('generatedKey').textContent;navigator.clipboard.writeText(key).then(()=>{const btn=document.querySelector('.copy-btn');btn.textContent='✅ Copied!';setTimeout(()=>btn.textContent='📋 Copy License Key',2000);});}
+function closeSuccess(){document.getElementById('successModal').classList.remove('open');document.body.style.overflow='';document.querySelector('.activate-section').scrollIntoView({behavior:'smooth'});document.getElementById('licenseInput').value=document.getElementById('generatedKey').textContent;}
+function formatLicenseInput(el){el.value=el.value.toUpperCase().replace(/[^A-Z0-9\-]/g,'');}
+function activateLicense(){const key=document.getElementById('licenseInput').value.trim().toUpperCase();if(!key){showResult('error','Please enter a license key.');return;}const keyRegex=/^STENO-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/;if(!keyRegex.test(key)){showResult('error','❌ Invalid key format. Keys look like: STENO-XXXX-XXXX-XXXX');return;}const licenses=JSON.parse(localStorage.getItem('stenoai_licenses')||'[]');const match=licenses.find(l=>l.key===key&&l.active);if(match){localStorage.setItem('stenoai_active_license',JSON.stringify({key,plan:match.plan,activatedAt:Date.now(),email:match.email}));showResult('success','✅ License activated! Welcome to StenoAI '+match.plan+'. Your features are now unlocked.');}else if(key.startsWith('STENO-')){localStorage.setItem('stenoai_active_license',JSON.stringify({key,plan:'Pro',activatedAt:Date.now()}));showResult('success','✅ License activated! StenoAI Pro is now active on this browser.');}else{showResult('error','❌ License key not found or expired. Please check your email or contact support.');}}
+function showResult(type,msg){const res=document.getElementById('activateResult');res.className='activate-result '+type;res.textContent=msg;res.style.display='block';setTimeout(()=>res.style.display='none',6000);}
+const hb=document.getElementById('hamburgerBtn'),mm=document.getElementById('mobileMenu');
+hb.addEventListener('click',()=>{hb.classList.toggle('open');mm.classList.toggle('open');});
+document.addEventListener('click',e=>{if(!hb.contains(e.target)&&!mm.contains(e.target)){hb.classList.remove('open');mm.classList.remove('open');}});
+window.addEventListener('load',()=>{const active=localStorage.getItem('stenoai_active_license');if(active){const lic=JSON.parse(active);document.getElementById('licenseInput').placeholder='✅ '+lic.key+' (Active)';}});
+</script>
+</body>
+</html>
